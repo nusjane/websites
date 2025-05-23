@@ -1,0 +1,24 @@
+<!-- index.html -->
+<body>
+    <h1>Click 1000 times to redeem a free ice cream on me!</h1>
+    <h2>McDonald?? Haagendaz?? Baskin Robbins??</h2>
+    <p>Click the button below to start counting!</p>
+  <div id="counter">Count: 0</div>
+  <button id="incrementBtn">Increment</button>
+
+  <script>
+    let count = 0;
+    const counterDiv = document.getElementById("counter");
+    const button = document.getElementById("incrementBtn");
+
+    button.addEventListener("click", () => {
+      count++;
+      counterDiv.innerText = "Count: " + count;
+        if (count === 1000) {
+            alert("Wtf");
+            count = 0; // Reset count after alert
+            counterDiv.innerText = "Count: " + count;
+        }
+    });
+  </script>
+</body>

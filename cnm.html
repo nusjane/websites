@@ -1,0 +1,60 @@
+<!DocType html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            /* CSS */
+            .button-1 {
+            background-color: #EA4C89;
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 40px;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            outline: none;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: color 100ms;
+            vertical-align: baseline;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            }
+            .button-1:hover,
+            .button-1:focus {
+            background-color: #F082AC;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button class="button-1" role="button" id = "cao" onclick="showFunction(this, 'a')" value = "操" >a</button>
+        <button class="button-1" role="button" id = "ni" onclick="showFunction(this, 'b')" value = "你">b</button>
+        <button class="button-1" role="button" id = "ma" onclick="showFunction(this,'c')" value = "妈">c</button>
+
+        <p id="a"> </p>
+        <p id="b"> </p>
+        <p id="c"> </p>
+    </body>
+
+    <script>
+        function showFunction(button, para) {
+            var word = button.value;
+            var audio = new Audio("https://www.soundjay.com/nature/sounds/wooden-floor-creaking-02.mp3");
+            audio.play();
+            document.getElementById(para).innerHTML = word;
+        }
+
+    </script>
+
+</html>
